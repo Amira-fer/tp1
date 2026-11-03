@@ -1,0 +1,17 @@
+<div class="form-group">
+    <label>Catégorie :</label>
+
+    <select class="form-control form-control-lg"
+            id="idCat"
+            name="idCat"
+            [(ngModel)]="updatedCatId">
+
+        @for(cat of categories; track cat.idCat)
+        {
+            <option [value]="cat.idCat">
+                {{cat.nomCat}}
+            </option>
+        }
+
+    </select>
+</div>
